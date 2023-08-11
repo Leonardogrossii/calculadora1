@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividade.css">
+    <title>Calculadora simples</title>
+</head>
+
+<body>
+    <h1 class="titulo">Calculadora Simples</h1>
+    <div class="container">
+        <input type="number" id="num1">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="number" id="num2">
+
+        <button onclick="var num1Val = parseFloat(num1.value);
+    var num2Val = parseFloat(num2.value);
+    var operatorVal = operator.value;
+    var resultVal;
+    switch (operatorVal) { case '+': resultVal = num1Val + num2Val;
+break;
+case '-': resultVal = num1Val - num2Val;
+break;
+case '*': resultVal = num1Val * num2Val;
+break;
+case '/': resultVal = num1Val / num2Val;
+break;
+default: resultVal = 'Operação inválida';
+} result.textContent = 'Resultado: ' + resultVal; ">Calcular</button>'
+    </div>
+
+
+    <p id="result"></p>
+
+</body>
+
+</html>
